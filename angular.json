@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pwa2020MTN2"
+    }
+  },
+  "defaultProject": "pwa2020MTN2",
+  "cli": {
+    "analytics": false
+  }
 }
