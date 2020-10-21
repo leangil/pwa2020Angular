@@ -1,9 +1,6 @@
-<input type="text" [(ngModel)]="numero">
-<button [disabled]="modificado"  (click)="adivinar()">Adivinar</button>
-<div [class]="class_mensaje">{{mensaje}}</div>
-<div [ngClass]="{gano:numero==5,perdio:numero!=5}">{{mensaje}}</div>
+<div *ngFor="let producto of productos">
+    <div>{{producto.name}}</div>
+    <button routerLink="/producto/{{producto.id}}">Ver Detalle</button>
+</div>
 
-
-<p *ngFor="let noticia of noticias">{{noticia.titulo}}</p>
-
-<p *ngIf="noticias.length==0">Hay Noticias</p>
+<p *ngIf="productos.length==0">Hay Productos</p>
