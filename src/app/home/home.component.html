@@ -1,3 +1,9 @@
 <input type="text" [(ngModel)]="numero">
-<button [disabled]="modificado" (click)="adivinar()">Adivinar</button>
-{{mensaje}}
+<button [disabled]="modificado"  (click)="adivinar()">Adivinar</button>
+<div [class]="class_mensaje">{{mensaje}}</div>
+<div [ngClass]="{gano:numero==5,perdio:numero!=5}">{{mensaje}}</div>
+
+
+<p *ngFor="let noticia of noticias">{{noticia.titulo}}</p>
+
+<p *ngIf="noticias.length==0">Hay Noticias</p>
