@@ -19,12 +19,17 @@ export class RegistroComponent implements OnInit {
   registro(){
     console.log(this.myForm.value)
     this.usrServ.create(this.myForm.value)
-    .subscribe(data=>{
-      console.log("data",data)
-    },
-    err=>{
-      console.log("Error",err)
-    })
+    .subscribe(
+      data=>{
+        console.log("data",data)
+        
+      },
+      err=>{
+        console.log("Error",err)
+      }
+    )
+
+
   }
 
   ngOnInit(): void {

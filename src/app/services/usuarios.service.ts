@@ -10,4 +10,10 @@ export class UsuariosService {
   create(datos){
     return this.http.post("http://localhost:3000/users/web/registro",datos)
   }
+  login(email,password){
+    return this.http.post("http://localhost:3000/users/web/login",{
+      email:email,
+      password:password
+    })
+  }
 }
