@@ -1,7 +1,7 @@
 <div *ngFor="let producto of productos">
     <!--<div>{{producto | json}}</div>-->
-    <div>{{producto.name}}</div>
-    <div>{{producto.price}}</div>
+    <div>{{producto.name | uppercase}}</div>
+    <div>{{producto.price | currency}}</div>
     <div>{{producto.category.name}}</div>
     <button routerLink="/producto/{{producto.id}}">Ver Detalle</button>
 </div>

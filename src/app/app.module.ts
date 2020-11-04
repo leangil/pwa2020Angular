@@ -10,7 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';//incluir
+import {MatMenuModule} from '@angular/material/menu';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,8 @@ import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.co
     AppRoutingModule,
     FormsModule, //incluir
     ReactiveFormsModule, //Incluir
-    HttpClientModule //incluir
+    HttpClientModule, 
+    BrowserAnimationsModule,MatButtonModule,MatMenuModule,MatFormFieldModule,MatInputModule,MatSnackBarModule //incluir
   ],
   providers: [],
   bootstrap: [AppComponent]
