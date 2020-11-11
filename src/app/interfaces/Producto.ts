@@ -4,6 +4,9 @@ export interface Producto{
     description:string;
     sku:string;
     price:number;
+    category?:{
+        name:string;
+    }
 }
 export interface ProductosPaginator{
     docs:Producto[];

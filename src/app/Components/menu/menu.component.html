@@ -1,0 +1,11 @@
+
+<button *ngIf="isLogin" mat-button routerLink="/">Inicio</button>
+<button *ngIf="isLogin" mat-button routerLink="/contacto">Contacto</button>
+<button *ngIf="!isLogin" mat-button routerLink="/login">Login</button>
+<button *ngIf="!isLogin" mat-button routerLink="/registro" >Registro</button>
+<button *ngIf="isLogin" mat-button (click)="logout()">Salir</button>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

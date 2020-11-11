@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuariosService } from '../services/usuarios.service';
+import { UsuariosService } from '../../services/usuarios.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {Login} from "../interfaces/Usuarios";
+import {Login} from "../../interfaces/Usuarios";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
         console.log("Success",data)
         if(data.token){
           //alert("Login exitoso");
-          localStorage.setItem("token",data.token);
+          this.usrServ.authenticate(data.token)
           this._snackBar.open("Bienvenido/a",null, {
             duration: 2000,
           });

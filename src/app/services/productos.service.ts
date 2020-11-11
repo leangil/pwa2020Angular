@@ -8,11 +8,10 @@ export class ProductosService {
 
   constructor(private http:HttpClient) { }
   getAll(){
-    return this.http.get(environment.endpointApi+"productos",{
-      headers:{
-        "x-access-token":localStorage.getItem("token")
-      }
-    })
+    return this.http.get(environment.endpointApi+"productos")
     
+  }
+  getById(id:string){
+    return this.http.get(environment.endpointApi+"productos/"+id)
   }
 }
