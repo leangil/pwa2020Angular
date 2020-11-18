@@ -4,8 +4,8 @@
 <button *ngIf="!isLogin" mat-button routerLink="/login">Login</button>
 <button *ngIf="!isLogin" mat-button routerLink="/registro" >Registro</button>
 <button *ngIf="isLogin" mat-button (click)="logout()">Salir</button>
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<button mat-button [matMenuTriggerFor]="menu">Productos</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+  <button mat-menu-item routerLink="/producto/new">Alta</button>
+  <button mat-menu-item routerLink="/productos">Listado</button>
 </mat-menu>

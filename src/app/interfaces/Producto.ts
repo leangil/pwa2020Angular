@@ -4,6 +4,7 @@ export interface Producto{
     description:string;
     sku:string;
     price:number;
+    image_path?:string;
     category?:{
         name:string;
     }
